@@ -7,10 +7,10 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var accountsRouter=require('./routes/accounts');
+
 var app = express();
 //mongoose setup
-var mongoose= require('mongoose');
-mongoose.connect('mongodb://localhost:27017/simple-express-app');
+require('./db/mongoose-con')
 // view engine setup
 var swig=require('swig');
 app.engine('html',swig.renderFile)
@@ -22,6 +22,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
