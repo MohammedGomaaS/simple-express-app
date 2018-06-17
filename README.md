@@ -18,7 +18,7 @@ Getting up and running is as easy as 1, 2, 3, 4, 5.
 
 3. Make sure you have [mongoDB](https://www.mongodb.com/)  installed.
 
-4. Go to   "./problemsolutios/config/default.json" and update "mongoDB" key with your connection string.
+4. Go to   "./simple-express-app/config/default.json" and update "mongoDB" key with your connection string.
 
 5. Start your app "will run on port 3000"
 
