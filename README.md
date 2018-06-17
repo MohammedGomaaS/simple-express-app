@@ -16,7 +16,7 @@ Getting up and running is as easy as 1, 2, 3, 4, 5.
     cd path/to/simple-express-app; npm install
     ```
 
-3. Make sure you have [mongoDB](https://www.mongodb.com/)  installed and "problemsolutions".
+3. Make sure you have [mongoDB](https://www.mongodb.com/)  installed.
 
 4. Go to   "./problemsolutios/config/default.json" and update "mongoDB" key with your connection string.
 
@@ -26,11 +26,11 @@ Getting up and running is as easy as 1, 2, 3, 4, 5.
     npm start
     ```
 
-6. Download  [Studio3T](https://studio3t.com/) "GUI of MongoDB" or any other GUI. and import this [file](https://drive.google.com/open?id=1RrCrVvqO2VH1jUSGp2oBfAU7LpNJtdSk) to accounts collection for "simple-express-app" db.
+6. Download  [Studio3T](https://studio3t.com/) "GUI for MongoDB" or any other GUI. and import this [file](https://drive.google.com/open?id=1RrCrVvqO2VH1jUSGp2oBfAU7LpNJtdSk) to accounts collection for "simple-express-app" db.
 
 7. To test accounts api, download postman and import this [collection](https://www.getpostman.com/collections/1e84e8703d48f5fdd2ac) 
 
-    -query paramters available for pagination($skip, $limit)  with prefix $
+    -query paramters available for pagination($skip, $limit)  with prefix 
 
-    -result will be limited to 20 with skip 0 if you didn't send (skip,limit) query paramters.
+    -result will be limited to 20 with skip 0 if you didn't send ($skip,$limit) query paramters.
 
